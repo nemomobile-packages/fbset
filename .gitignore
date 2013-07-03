@@ -1,0 +1,5 @@
+*.list
+/fbset/fbset
+/fbset/lex.yy.c
+/fbset/modes.tab.c
+/fbset/modes.tab.h

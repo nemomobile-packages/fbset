@@ -1,0 +1,18 @@
+diff --git a/fbset/Makefile b/fbset/Makefile
+index 3a71024..68f1e15 100644
+--- a/Makefile
++++ b/Makefile
+@@ -23,7 +23,12 @@ lex.yy.c:	modes.l
+ modes.tab.c:	modes.y
+ 		$(BISON) modes.y
+ 
+-install:	fbset
++install:
++		install -D -m644 fbset $(DESTDIR)/usr/sbin/fbset
++		install -D -m644 fbset.8 $(DESTDIR)/usr/share/man/man8/fbset.8
++		install -D -m644 fb.modes.5 $(DESTDIR)/usr/share/man/man5/fb.modes.5
++
++old_install:	fbset
+ 		if [ -f /sbin/fbset ]; then rm /sbin/fbset; fi
+ 		$(INSTALL) fbset /usr/sbin
+ 		$(INSTALL) fbset.8 /usr/man/man8
