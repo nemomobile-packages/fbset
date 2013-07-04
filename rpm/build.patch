@@ -8,7 +8,7 @@ index 3a71024..68f1e15 100644
  
 -install:	fbset
 +install:
-+		install -D -m644 fbset $(DESTDIR)/usr/sbin/fbset
++		install -D -m755 fbset $(DESTDIR)/usr/sbin/fbset
 +		install -D -m644 fbset.8 $(DESTDIR)/usr/share/man/man8/fbset.8
 +		install -D -m644 fb.modes.5 $(DESTDIR)/usr/share/man/man5/fb.modes.5
 +
